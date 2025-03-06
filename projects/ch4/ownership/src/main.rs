@@ -7,6 +7,8 @@
     3. WHEN THE OWNER GOES OUT OF SCOPE THE VALUE WILL BE DROPPED.
 */
 
+use std::string;
+
 fn main() {
     println!("Hello, world!");
     
@@ -38,6 +40,11 @@ fn main() {
     let x = 5;
 
     makes_copy(x);
+
+    let s1 = gives_ownership();
+
+    let s2 = String::from("hello");
+    let s3 = takes_and_gives_back(s2)
 }
 
 fn takes_ownership(some_string: String) {
@@ -47,4 +54,14 @@ fn takes_ownership(some_string: String) {
 fn makes_copy(some_int: i32) {
     println!("{some_int}");
 }
+
+fn gives_ownership() ->String {
+
+    let some_string = String::from("yours");
+    some_string
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+    a_string
+} 
 
