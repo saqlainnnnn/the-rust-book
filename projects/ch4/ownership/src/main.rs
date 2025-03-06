@@ -44,7 +44,7 @@ fn main() {
     let s1 = gives_ownership();
 
     let s2 = String::from("hello");
-    let s3 = takes_and_gives_back(s2)
+    let s3 = takes_and_gives_back(s2);
 }
 
 fn takes_ownership(some_string: String) {
