@@ -1,7 +1,8 @@
 #[derive(Debug)]
 
 enum UsState {
-    
+    Albama,
+    Alaska,
 }
 enum Coin {
     Penny,
